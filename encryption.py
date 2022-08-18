@@ -38,9 +38,10 @@ class EncryptedData(accounts):
             print('Enter encryption key\'s length.\n Possible options: 16, 24, 32.')
             keylen_is_valid = False
             while not keylen_is_valid:
-                key_len = int(input())
-                if key_len == 16 or key_len == 24 or key_len == 32:
+                key_len = input()
+                if key_len == '16' or key_len == '24' or key_len == '32':
                     keylen_is_valid = True
+                    key_len = int(key_len)
                 else:
                     print('Length is not valid, enter specified length.')
                     print('\n')
